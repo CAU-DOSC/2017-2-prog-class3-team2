@@ -1,5 +1,6 @@
 #include "Linked_List_Head.h"
 
+//노드생성함수
 LINK createNODE(int num)
 {
 	LINK cur;
@@ -8,7 +9,7 @@ LINK createNODE(int num)
 	cur->next = NULL;
 	return cur;
 }
-
+//노드추가함수
 LINK appendNODE(LINK head, LINK cur)
 {
 	LINK nextnode = head;
@@ -22,7 +23,7 @@ LINK appendNODE(LINK head, LINK cur)
 	nextnode->next = cur;
 	return head;
 }
-
+//노드출력함수
 void printNODE(LINK head)
 {
 	LINK nextnode = head;
