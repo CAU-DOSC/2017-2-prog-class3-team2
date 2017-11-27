@@ -21,15 +21,7 @@ int main()
 
 	//역순으로 출력
 	printf("역순으로 출력: ");
-	int last = numofNODE;
-	while (last > 0)
-	{
-		curnode = head;
-		for (int i = 0; i < last - 1; i++)
-			curnode = curnode->next;
-		printf("%d ", curnode->value);
-		last--;
-	}
+	reverseprintNODE(numofNODE);
 
 	//중간값출력
 	printf("\n중간값 출력: ");
