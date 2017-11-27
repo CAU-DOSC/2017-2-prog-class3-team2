@@ -2,8 +2,8 @@
 
 int main()
 {
-	NODE* head;
-	NODE* curnode;
+	LINK head;
+	LINK curnode;
 	char str[11];
 
 	head = createNODE(atoi(gets(str)));
@@ -17,14 +17,14 @@ int main()
 		numofNODE++;
 	}
 
-	printf("ÀÔ·ÂµÈ ÀÚ·áÀÇ °³¼ö %d\n", numofNODE);
+	printf("ì…ë ¥ëœ ìë£Œì˜ ê°œìˆ˜ %d\n", numofNODE);
 
-	//¿ª¼øÀ¸·Î Ãâ·Â
-	printf("¿ª¼øÀ¸·Î Ãâ·Â: ");
+	//ì—­ìˆœìœ¼ë¡œ ì¶œë ¥
+	printf("ì—­ìˆœìœ¼ë¡œ ì¶œë ¥: ");
 	reverseprintNODE(numofNODE);
 
-	//Áß°£°ªÃâ·Â
-	printf("\nÁß°£°ª Ãâ·Â: ");
+	//ì¤‘ê°„ê°’ì¶œë ¥
+	printf("\nì¤‘ê°„ê°’ ì¶œë ¥: ");
 	curnode = head;
 	int mid = 0;
 	while (mid < numofNODE / 2)
@@ -36,10 +36,10 @@ int main()
 	}
 	printf("%d\n", curnode->value);
 
-	//ÀÔ·Â¼øÀ¸·ÎÃâ·Â
+	//ì…ë ¥ìˆœìœ¼ë¡œì¶œë ¥
 	printNODE(head);
 
-	//È¦¼ö¹øÂ° ÀÚ·á »èÁ¦
+	//í™€ìˆ˜ë²ˆì§¸ ìë£Œ ì‚­ì œ
 	head = head->next;
 	curnode = head;
 	int cur = 2;
@@ -57,7 +57,7 @@ int main()
 	}
 	curnode->next = NULL;
 
-	printf("\n³²Àº°ÍÃâ·Â: ");
+	printf("\në‚¨ì€ê²ƒì¶œë ¥: ");
 	printNODE(head);
 
 
