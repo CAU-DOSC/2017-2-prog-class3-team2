@@ -34,15 +34,13 @@ void printNODE(LINK head)
 	}
 }
 //역순으로 출력
-void reverseprintNODE(LINK curNODE,int last)
+void reverseprintNODE(LINK head, LINK nextnode, int num)
 {
-	LINK froNODE = curNODE;
-	while (last > 0)
+	for (int a = num - 1;a >= 0;a--)
 	{
-		froNODE = curNODE;
-		for (int i = 0; i < last - 1; i++)
-			froNODE = froNODE->next;
-		printf("%d: ", curNODE->value);
-		last--;
+		for (int b = 0; b<a; b++)
+			nextnode = nextnode->next;
+		printf("%d ", nextnode->value);
+		nextnode = head;
 	}
 }
