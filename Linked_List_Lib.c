@@ -34,7 +34,7 @@ void printNODE(LINK head)
 	}
 }
 //역순으로 출력
-void reverseprintNODE(int Last)
+void reverseprintNODE(int last)
 {
 	while (last > 0)
 	{
