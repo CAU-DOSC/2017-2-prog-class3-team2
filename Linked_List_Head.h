@@ -18,4 +18,4 @@ typedef NODE* LINK;
 LINK createNODE(int num);
 LINK appendNODE(LINK head, LINK cur);
 void printNODE(LINK head);
-void reverseprintNODE(int last);
+void reverseprintNODE(LINK curNODE, int last);
