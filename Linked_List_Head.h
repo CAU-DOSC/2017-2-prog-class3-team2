@@ -3,18 +3,19 @@
 #include <string.h>
 #pragma warning(disable: 4996)
 
-//±¸Á¶Ã¼ Á¤ÀÇ
+//êµ¬ì¡°ì²´ ì •ì˜
 struct node
 {
 	int value;
 	struct node *next;
 };
 
-//NODE, LINK »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü ¼±¾ğ
+//NODE, LINK ì‚¬ìš©ì ì •ì˜ ìë£Œí˜• ì„ ì–¸
 typedef struct node NODE;
 typedef NODE* LINK;
 
-//ÇÔ¼ö ÇÁ·ÎÅäÅ¸ÀÔ
+//í•¨ìˆ˜ í”„ë¡œí† íƒ€ì…
 LINK createNODE(int num);
 LINK appendNODE(LINK head, LINK cur);
 void printNODE(LINK head);
+voidÂ reverseprintNODE(int last);
