@@ -3,17 +3,18 @@
 #include <string.h>
 #pragma warning(disable: 4996)
 
-//구조체
+//구조체 정의
 struct node
 {
 	int value;
 	struct node *next;
 };
-//NODE 선언
+
+//NODE, LINK 사용자 정의 자료형 선언
 typedef struct node NODE;
 typedef NODE* LINK;
 
-//함수 선언
+//함수 프로토타입
 LINK createNODE(int num);
 LINK appendNODE(LINK head, LINK cur);
 void printNODE(LINK head);
