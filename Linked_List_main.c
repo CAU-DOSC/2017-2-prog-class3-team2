@@ -21,7 +21,7 @@ int main()
 
 	//역순으로 출력
 	printf("역순으로 출력: ");
-	reverseprintNODE(numofNODE);
+	reverseprintNODE(head,numofNODE);
 
 	//중간값출력
 	printf("\n중간값 출력: ");
