@@ -28,6 +28,15 @@ Your description start form next line and do not delete lines upto this point.
 * int numofNODE: integer value counting #of NODE
 
 -Ideas of implementations:
+* declear node
+* create node by malloc()
+* input strings while input string != Ctrl + Z
+* count number of nodes
+* print value of nodes while node ->nest != NULL
+* print value of nodes reverse, numofnode(=n) , n-1, n-2, ... 2,1
+* print midvalue, moving next node n/2 times
+* remove odd nodes
+* print remaining nodes
 
 -Ownership:
 Linked_List_Head.h -paxcho1(조중현),celi1004(박진영)
