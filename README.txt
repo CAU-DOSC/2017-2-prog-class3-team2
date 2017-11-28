@@ -9,13 +9,18 @@ This text file describes brief but precise and complete specification of project
 Your description start form next line and do not delete lines upto this point.
 
 -Function descriptions:
+* LINK createNODE(int num) function --> a function that create Nodes.
+* LINK appendNODE(LINK head, LINK cur) function --> a function that append Nodes.
+* void printNODE(LINK head) function --> a function that prints Node values.
+* void reverseprintNODE(LINK head, LINK nestnode, int num) function --> a function that prints Node values in reverse.
+* MidValueprint(LINK head, LINk curnod, int numofNODE) function --> a function that prints mid located Node value.
 
 -Declaration of important date and date types:
 
 -Ideas of implementations:
 
 -Ownership:
-Linked_List_Head.h -
-Linked_List_Lib.c - SeongYunKim
-Linked_List_main.c -
-README.txt -
+Linked_List_Head.h -paxcho1(조중현),celi1004(진영)
+Linked_List_Lib.c - SeongYunKim(김성윤),kangyb1014(강영빈),paxcho1(조중현),celi1004(진영)
+Linked_List_main.c -kangyb1014(강영빈),SeongYunKim(김성윤),paxcho1(조중현),celi1004(진영)
+README.txt -paxcho1(조중현),SeongYunKim(김성윤)
