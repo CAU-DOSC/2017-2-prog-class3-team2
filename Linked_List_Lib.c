@@ -58,7 +58,7 @@ void MidValueprint(LINK head,LINK curnode,int numofNODE)
 	printf("%d\n", curnode->value);
 }
 
-void Removeoddprint(LINK head, int numodNODE)
+void Removeoddprint(LINK head, int numofNODE)
 {
 	int n = 1; 
 	LINK nextNODE = head;
@@ -70,7 +70,7 @@ void Removeoddprint(LINK head, int numodNODE)
 			n++;
 		}
 	
-		printf("%d번째 NODE: %d\n");
+		printf("%d\n", nextNODE->value);
 		nextNODE = nextNODE -> next;
 		n++;
 	}
