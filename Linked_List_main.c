@@ -17,19 +17,19 @@ int main()
 		numofNODE++;
 	}
 
-	printf("입력된 자료의 개수: %d\n", numofNODE);
+	printf("number of input value: %d\n\n", numofNODE);
 
 	//역순으로 출력
-	printf("입력된 자료를 역순으로 출력: ");
+	printf("print input value in reverse: ");
 	reverseprintNODE(head, curnode, numofNODE);
 
 	//중간값출력
-	printf("\n입력자료의 중간위치에 있는 자료의 값 출력: ");
+	printf("\n\nprint mid located value: ");
 	MidValueprint(head, curnode, numofNODE);
 
 
 	//입력순으로출력
-	printf("입력자료를 입력 순으로 출력: ");
+	printf("\nprint value in order: ");
 	printNODE(head);
 
 	//홀수번째 자료 삭제
@@ -50,7 +50,7 @@ int main()
 	}
 	curnode->next = NULL;
 
-	printf("\n입력자료에서 홀수번째 자료를 모두 삭제 후 순서대로 출력: ");
+	printf("\n\nprint only even node values: ");
 	printNODE(head);
 	puts("");
 	return 0;
