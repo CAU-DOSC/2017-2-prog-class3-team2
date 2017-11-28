@@ -13,7 +13,8 @@ Your description start form next line and do not delete lines upto this point.
 * LINK appendNODE(LINK head, LINK cur) function --> a function that append Nodes.
 * void printNODE(LINK head) function --> a function that prints Node values.
 * void reverseprintNODE(LINK head, LINK nestnode, int num) function --> a function that prints Node values in reverse.
-* MidValueprint(LINK head, LINk curnod, int numofNODE) function --> a function that prints mid located Node value.
+* void MidValueprint(LINK head, LINk curnod, int numofNODE) function --> a function that prints mid located Node value.
+* void Removeoddprint(LINK head, int numofNODE) function --> a function that prints evenNum NODE values.
 
 -Declaration of important data and data types:
  Data types:
