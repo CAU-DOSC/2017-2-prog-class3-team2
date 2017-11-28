@@ -1,6 +1,6 @@
 #include "Linked_List_Head.h"
 
-//노드생성함수
+//노드 생성 함수
 LINK createNODE(int num)
 {
 	LINK cur;
@@ -9,7 +9,7 @@ LINK createNODE(int num)
 	cur->next = NULL;
 	return cur;
 }
-//노드추가함수
+//노드 추가 함수
 LINK appendNODE(LINK head, LINK cur)
 {
 	LINK nextnode = head;
@@ -23,7 +23,7 @@ LINK appendNODE(LINK head, LINK cur)
 	nextnode->next = cur;
 	return head;
 }
-//노드출력함수
+//노드 출력 함수
 void printNODE(LINK head)
 {
 	LINK nextnode = head;
@@ -33,7 +33,7 @@ void printNODE(LINK head)
 		nextnode = nextnode->next;
 	}
 }
-//역순으로 출력
+//역순으로 출력 함수
 void reverseprintNODE(LINK head, LINK nextnode, int num)
 {
 	for (int a = num - 1;a >= 0;a--)
@@ -44,6 +44,7 @@ void reverseprintNODE(LINK head, LINK nextnode, int num)
 		nextnode = head;
 	}
 }
+//중간 노드값 출력 함수
 void MidValueprint(LINK head,LINK curnode,int numofNODE)
 {
 	curnode = head;
@@ -57,7 +58,7 @@ void MidValueprint(LINK head,LINK curnode,int numofNODE)
 	}
 	printf("%d\n", curnode->value);
 }
-
+//짝수 노드 제거후 출력 수
 void Removeoddprint(LINK head, int numofNODE)
 {
 	int n = 1; 
