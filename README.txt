@@ -29,7 +29,7 @@ Your description start form next line and do not delete lines upto this point.
 -Ideas of implementations:
 
 -Ownership:
-Linked_List_Head.h -paxcho1(조중현),celi1004(진영)
-Linked_List_Lib.c - SeongYunKim(김성윤),kangyb1014(강영빈),paxcho1(조중현),celi1004(진영)
-Linked_List_main.c -kangyb1014(강영빈),SeongYunKim(김성윤),paxcho1(조중현),celi1004(진영)
+Linked_List_Head.h -paxcho1(조중현),celi1004(박진영)
+Linked_List_Lib.c - SeongYunKim(김성윤),kangyb1014(강영빈),paxcho1(조중현),celi1004(박진영)
+Linked_List_main.c -kangyb1014(강영빈),SeongYunKim(김성윤),paxcho1(조중현),celi1004(박진영)
 README.txt -paxcho1(조중현),SeongYunKim(김성윤)
