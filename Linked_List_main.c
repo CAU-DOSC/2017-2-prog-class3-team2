@@ -6,6 +6,9 @@ int main()
 	LINK curnode;
 	char str[11];
 
+	//prompt sentence
+	printf("Please input values(ctrl+z to end):");
+	
 	head = createNODE(atoi(gets(str)));
 	curnode = head;
 	
