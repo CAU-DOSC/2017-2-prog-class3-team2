@@ -70,7 +70,7 @@ void Removeoddprint(LINK head, int numofNODE)
 			n++;
 		}
 	
-		printf("%d\n", nextNODE->value);
+		printf("%d ", nextNODE->value);
 		nextNODE = nextNODE -> next;
 		n++;
 	}
