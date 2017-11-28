@@ -20,4 +20,4 @@ LINK appendNODE(LINK head, LINK cur);
 void printNODE(LINK head);
 void reverseprintNODE(LINK head, LINK nextnode, int num);
 void MidValueprint(LINK head, LINK curnode, int numofNODE);
-void Removeoddprint(LINK head, int numodNODE);
+void Removeoddprint(LINK head, int numofNODE);
