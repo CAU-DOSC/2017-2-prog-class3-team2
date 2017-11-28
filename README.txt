@@ -15,7 +15,16 @@ Your description start form next line and do not delete lines upto this point.
 * void reverseprintNODE(LINK head, LINK nestnode, int num) function --> a function that prints Node values in reverse.
 * MidValueprint(LINK head, LINk curnod, int numofNODE) function --> a function that prints mid located Node value.
 
--Declaration of important date and date types:
+-Declaration of important data and data types:
+ Data types:
+* struct node {int value , struct NODE *next};
+* typedef node NODE
+* typedef NODE* LINK
+ Data:
+* LINK head: NODE pointer that point to head of linked list
+* LINK curnode: NODE pointer that point to current node
+* char str[11]: string to input numbers
+* int numofNODE: integer value counting #of NODE
 
 -Ideas of implementations:
 
