@@ -58,7 +58,7 @@ void MidValueprint(LINK head,LINK curnode,int numofNODE)
 	}
 	printf("%d\n", curnode->value);
 }
-//짝수 노드 제거후 출력 수
+//짝수 노드 제거후 출력 함수
 void Removeoddprint(LINK head, int numofNODE)
 {
 	int n = 1; 
