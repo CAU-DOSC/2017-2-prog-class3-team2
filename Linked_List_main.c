@@ -33,25 +33,8 @@ int main()
 	printNODE(head);
 
 	//홀수번째 자료 삭제
-	head = head->next;
-	curnode = head;
-	int cur = 2;
-	int last;
-	if (numofNODE % 2 == 0)
-		last = numofNODE;
-	else
-		last = numofNODE - 1;
-
-	while (cur < last)
-	{
-		curnode->next = curnode->next->next;
-		curnode = curnode->next;
-		cur += 2;
-	}
-	curnode->next = NULL;
-
 	printf("\n\nprint only even node values: ");
-	printNODE(head);
+	Removeoddprint(head, numofNODE);
 	puts("");
 	return 0;
 }
