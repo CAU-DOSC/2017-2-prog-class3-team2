@@ -44,3 +44,16 @@ void reverseprintNODE(LINK head, LINK nextnode, int num)
 		nextnode = head;
 	}
 }
+void MidValueprint(LINK head,LINK curnode,int numofNODE)
+{
+	curnode = head;
+	int mid = 0;
+	while (mid < numofNODE / 2)
+	{
+		if (numofNODE % 2 == 0 && mid == numofNODE / 2 - 1)
+			printf("%d ", curnode->value);
+		curnode = curnode->next;
+		mid++;
+	}
+	printf("%d\n", curnode->value);
+}

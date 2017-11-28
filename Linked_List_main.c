@@ -25,16 +25,8 @@ int main()
 
 	//중간값출력
 	printf("\n입력자료의 중간위치에 있는 자료의 값 출력: ");
-	curnode = head;
-	int mid = 0;
-	while (mid < numofNODE / 2)
-	{
-		if (numofNODE % 2 == 0 && mid == numofNODE / 2 - 1)
-			printf("%d ", curnode->value);
-		curnode = curnode->next;
-		mid++;
-	}
-	printf("%d\n", curnode->value);
+	MidValueprint(head, curnode, numofNODE);
+
 
 	//입력순으로출력
 	printf("입력자료를 입력 순으로 출력: ");
