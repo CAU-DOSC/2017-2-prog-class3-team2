@@ -1,7 +1,5 @@
-
 //#include "Stringsort_Head"
 //0 < d < strlen(str)이어야만 합니다
-
 
 //str1의 주소값과 str2의 주소값에서 각각 d만큼을 서로 스왑함
 void strswap(char *str1, char *str2, int d)

@@ -1,13 +1,14 @@
+//#include "Stringsort_Head"
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#pragma warning(disable: 4996)
 
-char *trivial(char str[], int n,int d);
-char *juggling(char* str[], int n, int d);
+char *trivial(char str[], int n, int d);
+char *juggling(char str[], int n, int d);
 char *blockswap(char str[], int n, int d);
 char *reverse(char str[], int n, int d);
-
 /*
 int main()
 {
@@ -25,7 +26,7 @@ int main()
 	str[n] = NULL;
 
 	printf("원래 문자열: %s\n", str);
-	printf("바뀐 문자열: %s\n", blockswap(str, n, d));		//여기에 자신이 만든 함수를 넣어 디버깅하세요
+	printf("바뀐 문자열: %s\n", reverse(str, n, d));		//여기에 자신이 만든 함수를 넣어 디버깅하세요
 
 	return 0;
 }
@@ -36,10 +37,18 @@ int main()
 	char *str;
 	int d;
 	int n;
+	int posi_nega;
 	srand(time(NULL));
 	
-	printf("문자열의 총 길이인 n과 rotation 상수 d를 입력하세요\n");
-	scanf("%d %d", &n, &d);
+	/*printf("문자열의 총 길이인 n과 rotation 상수 d를 입력하세요\n");
+	scanf("%d %d", &n, &d);*/
+
+	//0이면 d가 양수 1이면 d가 음수
+	posi_nega = (rand() % 2);
+	n = (rand() % 1000) + 1;
+	d = (rand() % n) + 1;
+	if (posi_nega == 1)
+		d = -d;
 
 	str = (char*)malloc(sizeof(char) * n+1);
 	for (int i = 0; i < n; i++)
@@ -62,7 +71,7 @@ int main()
 	printf("%-16f", (double)((clock() - exetime) / CLOCKS_PER_SEC));
 
 	exetime = clock();
-	//reverse(str, n, d);
+	reverse(str, n, d);
 	printf("%-16f\n", (double)((clock() - exetime) / CLOCKS_PER_SEC));
 
 	return 0;
