@@ -16,7 +16,7 @@ void strrev(char str[], int length)
 char *reverse(char str[], int n, int d)
 {	
 	char *str1, *str2;
-	//CounterClockWise Rotation(¹Ý½Ã°è¹æÇâ)
+	//CounterClockWise Rotation(ë°˜ì‹œê³„ë°©í–¥)
 	if (d < 0)
 	{
 		d = -d;
@@ -34,8 +34,8 @@ char *reverse(char str[], int n, int d)
 			str[b + d] = str2[b];
 		strrev(str, n);
 	}
-	//ClockWise Rotation(½Ã°è¹æÇâ)
-	//****Ãß°¡ ÇÊ¿ä****
+	//ClockWise Rotation(ì‹œê³„ë°©í–¥)
+	//****ì¶”ê°€ í•„ìš”****
 	else
 	{
 		str1 = (char*)malloc(sizeof(char) * ((n-d) + 1));
@@ -48,7 +48,7 @@ char *reverse(char str[], int n, int d)
 		for (int a = 0; a < n - d; a++)
 			str[a] = str1[a];
 		strrev(str2, d);
-		for (int b = 0; b < d; b++);
+		for (int b = 0; b < d; b++)
 		str[b + n - d] = str2[b];
 		strrev(str, n);
 	}
