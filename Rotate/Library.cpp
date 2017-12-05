@@ -183,5 +183,6 @@ char *trivial(char str[], int n, int d) {
 		}
 		str[1] = temp[1];
 	}
+	return str;
 }
 
