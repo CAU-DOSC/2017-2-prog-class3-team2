@@ -11,15 +11,15 @@ char *juggling(char str[], int n, int d);
 char *blockswap(char str[], int n, int d);
 char *reverse(char str[], int n, int d);*/
 
-
+/*
 int main()
 {
-	printf("µğ¹ö±ë¿ë main ÄÚµåÀÔ´Ï´Ù.\nµğ¹ö±ëÀÌ ¿ÏÀüÈ÷ ³¡³ª¸é ÇöÀç mainÇÔ¼ö¸¦ ÁÖ¼®Ã³¸®ÇÏ°í ÇÏ´Ü mainÇÔ¼ö¸¦ »ç¿ëÇÏ¼¼¿ä.\n");
+	printf("ë””ë²„ê¹…ìš© main ì½”ë“œì…ë‹ˆë‹¤.\në””ë²„ê¹…ì´ ì™„ì „íˆ ëë‚˜ë©´ í˜„ì¬ mainí•¨ìˆ˜ë¥¼ ì£¼ì„ì²˜ë¦¬í•˜ê³  í•˜ë‹¨ mainí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì„¸ìš”.\n");
 	char str[10000];
 	int d;
 	int n;
 	srand(time(NULL));
-	printf("¹®ÀÚ¿­ÀÇ ÃÑ ±æÀÌÀÎ n°ú rotation »ó¼ö d¸¦ ÀÔ·ÂÇÏ¼¼¿ä\n");
+	printf("ë¬¸ìì—´ì˜ ì´ ê¸¸ì´ì¸ nê³¼ rotation ìƒìˆ˜ dë¥¼ ì…ë ¥í•˜ì„¸ìš”\n");
 	scanf("%d %d", &n, &d);
 
 	//str = (char*)malloc(n+1);
@@ -27,14 +27,14 @@ int main()
 	str[i] = (rand() % 26) + 'A';
 	str[n] = NULL;
 
-	printf("¿ø·¡ ¹®ÀÚ¿­: %s\n", str);
-	printf("¹Ù²ï ¹®ÀÚ¿­: %s\n", reverse(str, n, d));		//¿©±â¿¡ ÀÚ½ÅÀÌ ¸¸µç ÇÔ¼ö¸¦ ³Ö¾î µğ¹ö±ëÇÏ¼¼¿ä
+	printf("ì›ë˜ ë¬¸ìì—´: %s\n", str);
+	printf("ë°”ë€ ë¬¸ìì—´: %s\n", reverse(str, n, d));		//ì—¬ê¸°ì— ìì‹ ì´ ë§Œë“  í•¨ìˆ˜ë¥¼ ë„£ì–´ ë””ë²„ê¹…í•˜ì„¸ìš”
 
 	return 0;
 }
+*/
 
-
-/*int main()
+int main()
 {
 	char *str;
 	int d;
@@ -42,10 +42,10 @@ int main()
 	int posi_nega;
 	srand(time(NULL));
 	
-	//printf("¹®ÀÚ¿­ÀÇ ÃÑ ±æÀÌÀÎ n°ú rotation »ó¼ö d¸¦ ÀÔ·ÂÇÏ¼¼¿ä\n");
+	//printf("ë¬¸ìì—´ì˜ ì´ ê¸¸ì´ì¸ nê³¼ rotation ìƒìˆ˜ dë¥¼ ì…ë ¥í•˜ì„¸ìš”\n");
 	//scanf("%d %d", &n, &d);
 
-	//0ÀÌ¸é d°¡ ¾ç¼ö 1ÀÌ¸é d°¡ À½¼ö
+	//0ì´ë©´ dê°€ ì–‘ìˆ˜ 1ì´ë©´ dê°€ ìŒìˆ˜
 	posi_nega = (rand() % 2);
 	n = (rand() % 1000) + 1;
 	d = (rand() % n) + 1;
@@ -78,4 +78,4 @@ int main()
 
 	return 0;
 }
-*/
+
