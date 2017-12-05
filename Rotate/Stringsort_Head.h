@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#include <math.h>
 #pragma warning(disable: 4996)
 
 char *trivial(char str[], int n, int d);
