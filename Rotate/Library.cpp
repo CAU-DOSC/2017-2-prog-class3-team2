@@ -101,8 +101,7 @@ char* blockswap(char str[], int len, int d)
 		return str;
 	}
 }
-#include <stdio.h>
-#include <stdlib.h>
+
 
 void strrev(char str[], int length)
 {
@@ -157,15 +156,4 @@ char *reverse(char str[], int n, int d)
 	}
 	return str;
 }
-char *trivial(char str[], int n, int d) {
 
-	char temp[1];
-	
-	for (int i = 0; i < d; d++) {
-		temp[1] = str[n - 1];
-		for (int j = n-1; j >0; j--) {
-			str[j] = str[j - 1];
-		}
-		str[1] = temp[1];
-	}
-}
