@@ -73,6 +73,7 @@ void strswap(char *str1, char *str2, int d)
 	return;
 }
 
+//BlockSwap 
 //str은 앞 문자열 맨 앞의 주소값, len은 문자열의 길이, d는 앞부분 문자열의 길이
 char* blockswap(char str[], int len, int d)
 {
@@ -114,6 +115,7 @@ void strrev(char str[], int length)
 	}
 }
 
+//Reverse 
 char *reverse(char str[], int n, int d)
 {
 	char *str1, *str2;
