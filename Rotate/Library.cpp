@@ -1,6 +1,6 @@
 #include "Stringsort_Head.h"
 
-//ÃÖ´ë°ø¾à¼ö Ã£´Â ÇÔ¼ö
+//ìµœëŒ€ê³µì•½ìˆ˜ ì°¾ëŠ” í•¨ìˆ˜
 int getGCD(int a, int b) {
 	while (0 != b) {
 		int temp = a % b;
@@ -9,12 +9,12 @@ int getGCD(int a, int b) {
 	}
 	return abs(a);
 }
-//Juggling ÇÔ¼ö
+//Juggling í•¨ìˆ˜
 char *juggling(char str[], int n, int d)
 {
 	int i, j, k, temp;
 
-	// ½Ã°è¹æÇâÀ¸·Î rotate
+	// ì‹œê³„ë°©í–¥ìœ¼ë¡œ rotate
 	if (d >= 0) {
 		for (i = 0; i < getGCD(d, n); i++)
 		{
@@ -35,7 +35,7 @@ char *juggling(char str[], int n, int d)
 		}
 	}
 
-	//¹Ý½Ã°è¹æÇâÀ¸·Î rotate
+	//ë°˜ì‹œê³„ë°©í–¥ìœ¼ë¡œ rotate
 	if (d < 0) {
 		for (i = 0; i < getGCD(d, n); i++)
 		{
@@ -58,9 +58,9 @@ char *juggling(char str[], int n, int d)
 
 	return str;
 }
-//0 < d < strlen(str)ÀÌ¾î¾ß¸¸ ÇÕ´Ï´Ù
+//0 < d < strlen(str)ì´ì–´ì•¼ë§Œ í•©ë‹ˆë‹¤
 
-//str1ÀÇ ÁÖ¼Ò°ª°ú str2ÀÇ ÁÖ¼Ò°ª¿¡¼­ °¢°¢ d¸¸Å­À» ¼­·Î ½º¿ÒÇÔ
+//str1ì˜ ì£¼ì†Œê°’ê³¼ str2ì˜ ì£¼ì†Œê°’ì—ì„œ ê°ê° dë§Œí¼ì„ ì„œë¡œ ìŠ¤ì™‘í•¨
 void strswap(char *str1, char *str2, int d)
 {
 	char temp;
@@ -73,27 +73,27 @@ void strswap(char *str1, char *str2, int d)
 	return;
 }
 
-//strÀº ¾Õ ¹®ÀÚ¿­ ¸Ç ¾ÕÀÇ ÁÖ¼Ò°ª, lenÀº ¹®ÀÚ¿­ÀÇ ±æÀÌ, d´Â ¾ÕºÎºÐ ¹®ÀÚ¿­ÀÇ ±æÀÌ
+//strì€ ì•ž ë¬¸ìžì—´ ë§¨ ì•žì˜ ì£¼ì†Œê°’, lenì€ ë¬¸ìžì—´ì˜ ê¸¸ì´, dëŠ” ì•žë¶€ë¶„ ë¬¸ìžì—´ì˜ ê¸¸ì´
 char* blockswap(char str[], int len, int d)
 {
-	//¹üÀ§°¡ ³Ñ¾î°¡¸é ÀÏ´Ü ¸®ÅÏ. ¹Ì¿Ï¼º
+	//ë²”ìœ„ê°€ ë„˜ì–´ê°€ë©´ ì¼ë‹¨ ë¦¬í„´. ë¯¸ì™„ì„±
 	if (*(str + d) == 0)
 		return str;
 
-	//¾Õ ¹®ÀÚ¿­°ú µÚ ¹®ÀÚ¿­ÀÇ ±æÀÌ°¡ °°À» ¶§
+	//ì•ž ë¬¸ìžì—´ê³¼ ë’¤ ë¬¸ìžì—´ì˜ ê¸¸ì´ê°€ ê°™ì„ ë•Œ
 	if (len == 2 * d)
 	{
 		strswap(str, str + d, d);
 		return str;
 	}
-	//¾Õ ¹®ÀÚ¿­ÀÌ ´õ ÂªÀ» ¶§
+	//ì•ž ë¬¸ìžì—´ì´ ë” ì§§ì„ ë•Œ
 	if (2 * d < len)
 	{
 		strswap(str, str + len - d, d);
 		blockswap(str, len - d, d);
 		return str;
 	}
-	//¾Õ ¹®ÀÚ¿­ÀÌ ´õ ±æ ¶§
+	//ì•ž ë¬¸ìžì—´ì´ ë” ê¸¸ ë•Œ
 	if (2 * d > len)
 	{
 		strswap(str, str + d, len - d);
@@ -118,7 +118,7 @@ void strrev(char str[], int length)
 char *reverse(char str[], int n, int d)
 {
 	char *str1, *str2;
-	//CounterClockWise Rotation(¹Ý½Ã°è¹æÇâ)
+	//CounterClockWise Rotation(ë°˜ì‹œê³„ë°©í–¥)
 	if (d < 0)
 	{
 		d = -d;
@@ -136,11 +136,24 @@ char *reverse(char str[], int n, int d)
 			str[b + d] = str2[b];
 		strrev(str, n);
 	}
-	//ClockWise Rotation(½Ã°è¹æÇâ)
-	//****Ãß°¡ ÇÊ¿ä****
+	//ClockWise Rotation(ì‹œê³„ë°©í–¥)
+	//****ì¶”ê°€ í•„ìš”****
 	else
 	{
 
+		str1 = (char*)malloc(sizeof(char) * ((n-d) + 1));
+		str2 = (char*)malloc(sizeof(char) * (n + 1));
+		for (int a = 0; a < n - d; a++)
+			str1[a] = str[a];
+		for (int b = 0; b < d; b++)
+			str2[b] = str[b+n-d];
+		strrev(str1, n-d);
+		for (int a = 0; a < n - d; a++)
+			str[a] = str1[a];
+		strrev(str2, d);
+		for (int b = 0; b < d; b++);
+		str[b + n - d] = str2[b];
+		strrev(str, n);
 	}
 	return str;
 }
