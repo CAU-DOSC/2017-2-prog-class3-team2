@@ -142,6 +142,20 @@ char *reverse(char str[], int n, int d)
 	else
 	{
 
+		str1 = (char*)malloc(sizeof(char) * ((n-d) + 1));
+		str2 = (char*)malloc(sizeof(char) * (n + 1));
+		for (int a = 0; a < n - d; a++)
+			str1[a] = str[a];
+		for (int b = 0; b < d; b++)
+			str2[b] = str[b+n-d];
+		strrev(str1, n-d);
+		for (int a = 0; a < n - d; a++)
+			str[a] = str1[a];
+		strrev(str2, d);
+		for (int b = 0; b < d; b++);
+		str[b + n - d] = str2[b];
+		strrev(str, n);
 	}
 	return str;
 }
+
