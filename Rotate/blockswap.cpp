@@ -1,7 +1,7 @@
 //#include "Stringsort_Head"
-//0 < d < strlen(str)ÀÌ¾î¾ß¸¸ ÇÕ´Ï´Ù
+//n/d ì´ 5000ì„ ë„˜ì–´ê°€ë©´stack overflowê°€ ìƒê¸°ëŠ” ì˜¤ë¥˜ê°€ ìˆìŠµë‹ˆë‹¤
 
-//str1ÀÇ ÁÖ¼Ò°ª°ú str2ÀÇ ÁÖ¼Ò°ª¿¡¼­ °¢°¢ d¸¸Å­À» ¼­·Î ½º¿ÒÇÔ
+//str1ì˜ ì£¼ì†Œê°’ê³¼ str2ì˜ ì£¼ì†Œê°’ì—ì„œ ê°ê° dë§Œí¼ì„ ì„œë¡œ ìŠ¤ì™‘í•¨
 void strswap(char *str1, char *str2, int d)
 {
 	char temp;
@@ -14,27 +14,30 @@ void strswap(char *str1, char *str2, int d)
 	return;
 }
 
-//strÀº ¾Õ ¹®ÀÚ¿­ ¸Ç ¾ÕÀÇ ÁÖ¼Ò°ª, lenÀº ¹®ÀÚ¿­ÀÇ ±æÀÌ, d´Â ¾ÕºÎºĞ ¹®ÀÚ¿­ÀÇ ±æÀÌ
+//strì€ ì• ë¬¸ìì—´ ë§¨ ì•ì˜ ì£¼ì†Œê°’, lenì€ ë¬¸ìì—´ì˜ ê¸¸ì´, dëŠ” ì•ë¶€ë¶„ ë¬¸ìì—´ì˜ ê¸¸ì´
 char* blockswap(char str[], int len, int d)
 {
-	//¹üÀ§°¡ ³Ñ¾î°¡¸é ÀÏ´Ü ¸®ÅÏ. ¹Ì¿Ï¼º
-	if (*(str + d) == 0)
+	if (d < 0) d = len + d;	//dê°€ 0ë³´ë‹¤ ì‘ìœ¼ë©´counterclockwise
+	
+	if (d > len) d = d % len;	//d > nì´ë©´ dê°’ ìˆ˜ì •
+	
+	if (*(str + d) == 0 || d == 0)
 		return str;
 
-	//¾Õ ¹®ÀÚ¿­°ú µÚ ¹®ÀÚ¿­ÀÇ ±æÀÌ°¡ °°À» ¶§
+	//ì• ë¬¸ìì—´ê³¼ ë’¤ ë¬¸ìì—´ì˜ ê¸¸ì´ê°€ ê°™ì„ ë•Œ
 	if (len == 2 * d)
 	{
 		strswap(str, str+d, d);
 		return str;
 	}
-	//¾Õ ¹®ÀÚ¿­ÀÌ ´õ ÂªÀ» ¶§
+	//ì• ë¬¸ìì—´ì´ ë” ì§§ì„ ë•Œ
 	if (2 * d < len)
 	{
 		strswap(str, str + len - d, d);
 		blockswap(str, len - d, d);
 		return str; 
 	}
-	//¾Õ ¹®ÀÚ¿­ÀÌ ´õ ±æ ¶§
+	//ì• ë¬¸ìì—´ì´ ë” ê¸¸ ë•Œ
 	if (2 * d > len)	
 	{
 		strswap(str, str + d, len - d);
