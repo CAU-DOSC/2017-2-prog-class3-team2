@@ -10,3 +10,4 @@ char *blockswap(char str[], int n, int d);
 char *reverse(char str[], int n, int d);
 void strswap(char *str1, char *str2, int d);
 void strrev(char str[], int length);
+int getGCD(int a, int b);
