@@ -1,5 +1,6 @@
-//#include "Stringsort_Head"
-#include <stdio.h>
+#include "Stringsort_Head.h"
+
+/*#include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
@@ -8,8 +9,9 @@
 char *trivial(char str[], int n, int d);
 char *juggling(char str[], int n, int d);
 char *blockswap(char str[], int n, int d);
-char *reverse(char str[], int n, int d);
-/*
+char *reverse(char str[], int n, int d);*/
+
+
 int main()
 {
 	printf("디버깅용 main 코드입니다.\n디버깅이 완전히 끝나면 현재 main함수를 주석처리하고 하단 main함수를 사용하세요.\n");
@@ -30,9 +32,9 @@ int main()
 
 	return 0;
 }
-*/
 
-int main()
+
+/*int main()
 {
 	char *str;
 	int d;
@@ -40,8 +42,8 @@ int main()
 	int posi_nega;
 	srand(time(NULL));
 	
-	/*printf("문자열의 총 길이인 n과 rotation 상수 d를 입력하세요\n");
-	scanf("%d %d", &n, &d);*/
+	//printf("문자열의 총 길이인 n과 rotation 상수 d를 입력하세요\n");
+	//scanf("%d %d", &n, &d);
 
 	//0이면 d가 양수 1이면 d가 음수
 	posi_nega = (rand() % 2);
@@ -63,7 +65,7 @@ int main()
 	printf("%-16f", (double)((clock() - exetime) / CLOCKS_PER_SEC));
 
 	exetime = clock();
-	//juggling(str, n, d);
+	juggling(str, n, d);
 	printf("%-16f", (double)((clock() - exetime) / CLOCKS_PER_SEC));
 
 	exetime = clock();
@@ -76,3 +78,4 @@ int main()
 
 	return 0;
 }
+*/
